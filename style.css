@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@keyframes words {
+  0%, 20% {
+    content: "Web Developer";
+  }
+  21%, 40% {
+    content: "Figma maker";
+  }
+  41%, 60% {
+    content: "Youtuber";
+  }
+  61%, 80% {
+    content: "Blogger";
+  }
+  81%, 100% {
+    content: "Photographer";
+  }
+}
+@keyframes typing {
+  10%, 15%, 20%, 25%, 30%, 35%, 40%, 45%, 50%, 55%, 60%, 65%, 70%, 75%, 80%, 85%, 90%, 95% {
+    width: 0;
+  }
+  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+    width: calc(100% + 8px);
+  }
+}
+@keyframes cursor {
+  to {
+    border-left: 2px solid var(--main-color);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+.text-animation span {
+  position: relative;
+}
+
+.text-animation {
+  font-size: 2rem;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.text-animation span::before {
+  content: "Web Developer";
+  color: var(--main-color);
+  animation: words 20s infinite;
+}
+
+span .text-animation span::after {
+  content: "";
+  background-color: var(--bg-color);
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 2px solid #f1f1f1;
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+}
+
+*::-moz-selection {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+
+*::selection {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* BREAKPOINTS */
+header {
+  padding: 1.4rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  z-index: 999;
+  background: var(--bg-color);
+  position: fixed;
+  width: 100%;
+  margin-top: -4rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+body * {
+  color: white;
+}
+
+span {
+  color: var(--main-color);
+}
+
+nav a {
+  font-size: 1.7rem;
+  transition: 0.3s;
+}
+
+header > a {
+  transition: 0.3;
+  pointer-events: none;
+  font-size: 2.2rem;
+}
+
+header > a:hover {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.home-img img {
+  border-radius: 4rem;
+}
+
+nav a:hover {
+  transform: scale(1.2);
+  color: var(--main-color);
+}
+
+.home {
+  margin: 4rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+}
+
+.btn {
+  font-weight: 700;
+  margin-top: 2rem;
+  display: inline-flex;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  background: var(--bg-color);
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0 0 1rem var(--main-color);
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+.home-content h3 {
+  font-size: 3rem;
+}
+
+.home-content h1 {
+  margin: 1rem 0;
+  font-size: 3.1rem;
+}
+
+.home-content p {
+  margin-top: 0.7rem;
+  font-size: 2rem;
+}
+
+.services > h2 {
+  text-align: center;
+  font-size: 3.7rem;
+  margin-bottom: 6rem;
+}
+
+.container-boxs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.container-box {
+  padding: 1rem;
+  border: 2px solid var(--main-color);
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  transition: 0.3s;
+}
+
+.container-box:hover {
+  box-shadow: 0 0 1rem var(--main-color);
+  transform: scale(1.1);
+}
+
+.container-box i {
+  font-size: 5rem;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+.container-box p {
+  font-size: 1.5rem;
+}
+
+.services {
+  width: 100%;
+  height: 100vh;
+}
+
+.about {
+  width: 100%;
+  height: 100vh;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3rem;
+}
+.about-img img {
+  border-radius: 4rem;
+}
+.about-content * {
+  margin: 1.7rem;
+}
+.about-content h1 {
+  font-size: 3rem;
+}
+.about-content p {
+  font-size: 2rem;
+}/*# sourceMappingURL=style.css.map */
